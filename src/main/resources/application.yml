@@ -1,0 +1,34 @@
+server:
+  port: 50002
+
+spring:
+  application:
+    name: event-eb-service
+  event-bus:
+    server-ip: 172.30.13.177
+    producer-port: 32236
+    consumer-port: 32234
+    source-topic: b5f9bd5310b5415c82ac23a9406e5c2f
+    target-topic: 276fc59d2e864e3c853aa76c5a95a080
+    consumer-group: g_b5f9bd5310b5415c82ac23a9406e5c2f
+    send-times: 5
+    columns: name
+    # 证书信息，后续版本中需要增加证书校验
+  credential:
+    key: bigdata#system
+    signature: qNVu4MbI8DyuNDaFATVEDj4oLASUZc5fH/v7hHXYgWlRa7kv4Wd+TvE/eCXCEXjoeB6uKCwepKdzI1YkvGFYbToyt1+rls9cPVpsBLsZ7DNiTWAJXMehrJgi8RXwbXvKrpb197aFZiXHi7u6ashW+ZB5AT/8CEEP7TuK3IdTsqk=
+    expiredDate: 2020-09-08 21:00:00.000
+    appId: bigdata_dsep
+
+
+
+springfox:
+  documentation:
+    header: 消息测试服务
+    swagger:
+      v2:
+        path: /api-docs
+
+logging:
+  level:
+    root: info
